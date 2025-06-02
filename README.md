@@ -2,7 +2,7 @@
 
 A secure Node.js backend API that scans uploaded documents for potential threats. Built with Express, Multer, and MongoDB, this backend service is designed for applications that require safe file uploads and robust backend security.
 
-![Virus Scanner Banner](./A_digital_illustration_features_a_technology-theme.png)
+
 
 ---
 
