@@ -20,31 +20,62 @@ A secure Node.js backend API that scans uploaded documents for potential threats
 ---
 
 
----
+## 🧠 Overview
 
-## 🛠 Tech Stack
+- **Frontend**: Upload documents and view scan results
+- **Backend**: Handle file uploads, file-type detection, and security checks
+- **Database**: Store metadata of scanned files
 
-- **Node.js + Express.js**
-- **MongoDB + Mongoose**
-- **Multer** (file uploads)
-- **Helmet**, **Rate Limit**, **Mongo Sanitize** (security)
-- **File-Type** (content verification)
-- **Jest + Supertest** (testing)
 
 ---
 
-## 🧩 Possible Future Enhancements
+## 🖥️ Frontend
 
-- ⚙️ Integration with virus scanning APIs (ClamAV, VirusTotal)
-- 🌐 RESTful API documentation
-- 📊 Admin dashboard for upload stats
-- 🔐 Authentication and authorization layers
-- ☁️ Cloud storage support (S3, GCP)
+### 🔹 Features
+
+- Simple upload interface
+- Sends file to backend via `POST /upload`
+- Displays scan success/failure message
+
+### 🔹 Technologies
+
+- HTML, CSS, JavaScript (vanilla)
+- Axios (for making HTTP requests)
 
 ---
+
+## 🧰 Backend
+
+### 🔹 Features
+
+- File uploads via `multer`
+- File type validation using `file-type`
+- Secure server with:
+  - `helmet` (headers)
+  - `express-rate-limit` (rate limiting)
+  - `express-mongo-sanitize` (injection prevention)
+- Stores metadata in MongoDB
+
+### 🔹 Technologies
+
+| Purpose        | Tech Stack / Packages                             |
+|----------------|---------------------------------------------------|
+| **Runtime**    | Node.js                                           |
+| **Framework**  | Express.js                                        |
+| **Database**   | MongoDB, Mongoose                                 |
+| **File Upload**| Multer                                            |
+| **File Type Detection** | File-Type                              |
+| **Security**   | Helmet, Express Rate Limit, Express Mongo Sanitize |
+| **Testing**    | Jest, Supertest                                   |
+| **Environment**| dotenv                                            |
+| **UUID Support**| uuid                                             |
+
+---
+
 
 ## 👨‍💻 Author
 
 **Aman Choudhary**  
+
 
 
