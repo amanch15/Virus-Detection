@@ -72,6 +72,13 @@ A secure Node.js backend API that scans uploaded documents for potential threats
 
 ---
 
+## 🌐 Live Preview
+
+🔗 [Click here to view the live app](securedocscanner.vercel.app)
+
+This live site allows you to upload files and test the virus scanning functionality in real-time.
+
+
 
 ## 👨‍💻 Author
 
