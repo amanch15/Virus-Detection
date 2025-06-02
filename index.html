@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SecureDoc Scanner | Advanced Document Virus Detection</title>
+  <meta name="description" content="Scan your documents for viruses with our advanced security tool">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container" role="main">
+    <header class="scanner-header">
+      <div class="logo">
+        <i class="fas fa-shield-virus"></i>
+        <h1>SecureDoc Scanner</h1>
+      </div>
+      <p class="subtitle">Advanced document security analysis </p>
+    </header>
+
+    <div class="upload-area" id="dropZone">
+      <div class="upload-content">
+        <i class="fas fa-cloud-upload-alt upload-icon"></i>
+        <input type="file" id="fileInput" aria-label="Upload document file" 
+               accept=".pdf,.doc,.docx,.txt,.rtf,.xlsx,.xls,.ppt,.pptx,.odt,.ods,.odp" />
+        <label for="fileInput" class="upload-btn" id="uploadLabel" tabindex="0" role="button" aria-pressed="false">
+          <span class="btn-text">Choose Document</span>
+          <span class="btn-subtext">or drag & drop files here</span>
+        </label>
+        <div class="file-types">
+          <span>Supported formats: PDF, DOCX, XLSX, PPTX, TXT</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="scanner-details">
+      <div class="filename" id="filenameDisplay" aria-live="polite"></div>
+      <div class="file-details" id="fileDetails"></div>
+      
+      <div class="scanner-status" id="scannerStatus" aria-live="polite"></div>
+      <div class="progress-container">
+        <div class="progress-info">
+          <span id="progressPercent">0%</span>
+          <span id="timeRemaining">~5s remaining</span>
+        </div>
+        <div class="progress-bar" aria-hidden="true">
+          <div class="progress-bar-inner" id="progressBar"></div>
+        </div>
+      </div>
+
+      <div class="scan-result" id="scanResult" aria-live="polite" role="alert"></div>
+      <div class="scan-meta" id="scanMeta"></div>
+    </div>
+
+    <div class="features">
+      <div class="feature">
+        <i class="fas fa-bolt"></i>
+        <h3>Fast Scanning</h3>
+        <p>Quick analysis without compromising accuracy</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-database"></i>
+        <h3>Deep Analysis</h3>
+        <p>Examines file contents and metadata</p>
+      </div>
+      <div class="feature">
+        <i class="fas fa-lock"></i>
+        <h3>Secure</h3>
+        <p>Files are deleted after scanning</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-note">
+    <p>This service uses advanced heuristics and virus databases to detect threats.</p>
+    <p class="privacy-link"><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+  </footer>
+
+  <script src="app.js"></script>
+  <script src="virus-scanner-server.js"></script>
+</body>
+</html>
